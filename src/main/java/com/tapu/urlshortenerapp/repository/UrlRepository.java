@@ -13,10 +13,10 @@ public interface UrlRepository extends JpaRepository<Url, Long> {
 
     Url findByShortened(String shortened);
 
-    @Query("SELECT u.shortened FROM Url u WHERE u.users.Id = ?1")
+    @Query("SELECT u.shortened FROM Url u WHERE u.user.Id = ?1")
     List<String> findByShortLinkByUserId(Long userId);
 
-   @Query("SELECT u.shortened FROM Url u WHERE u.users.Id = ?1 AND u.Id=?2")
+   @Query("SELECT u.shortened FROM Url u WHERE u.user.Id = ?1 AND u.Id=?2")
    List<String> findByShortLinkByUserIdAndId(Long userId, Long urlId);
 
     @Query("SELECT " +

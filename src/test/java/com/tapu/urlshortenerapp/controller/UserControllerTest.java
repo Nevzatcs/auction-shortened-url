@@ -31,7 +31,7 @@ class UserControllerTest {
         User user = new User();
         user.setId(1L);
         Optional<User> expected = Optional.of(user);
-        when(mockUserService.saveCustomer(any())).thenReturn(expected);
+        when(mockUserService.saveUser(any())).thenReturn(expected);
 
         // when
         UserDTO dto = new UserDTO();

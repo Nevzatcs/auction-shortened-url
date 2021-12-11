@@ -31,12 +31,12 @@ public class Url extends AbstractBaseEntity{
         this.shortened = shortened;
     }
 
-    public User getUsers() {
-        return users;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsers(User users) {
-        this.users = users;
+    public void setUser(User users) {
+        this.user = users;
     }
 
     @Override
@@ -52,5 +52,5 @@ public class Url extends AbstractBaseEntity{
     }
 
     @ManyToOne
-    User users;
+    User user;
 }

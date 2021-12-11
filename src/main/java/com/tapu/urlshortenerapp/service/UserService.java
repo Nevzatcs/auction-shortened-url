@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Service
 public interface UserService {
-    Optional<User> saveCustomer(UserDTO userDTO);
+    Optional<User> saveUser(UserDTO userDTO);
 
     Optional<User> findUserById(Long userId);
 

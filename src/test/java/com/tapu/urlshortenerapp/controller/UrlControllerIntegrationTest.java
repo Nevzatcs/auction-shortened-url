@@ -24,35 +24,35 @@ public class UrlControllerIntegrationTest {
 
 
 
-    @Test
-    public void shouldReturnUserAllUrls()
-    {
+   @Test
+   public void shouldReturnUserAllUrls()
+   {
 
-        Long userId=1L;
-        ResponseEntity<String> responseEntity = this.restTemplate.getForEntity(basePath +"/user/{userId}/url/list",String.class,userId);
+       Long userId=1L;
+       ResponseEntity<String> responseEntity = this.restTemplate.getForEntity(basePath +"/user/{userId}/url/list",String.class,userId);
 
-        assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
+       assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
 
-    }
+   }
 
-    @Test
-    public void shouldReturnUrlDetailForUser(){
-        String userId="1";
-        String urlId="1";
-        ResponseEntity<String> responseEntity = this.restTemplate.getForEntity(basePath +"/user/{userId}/url/detail/{urlId}",String.class,userId, urlId);
+   @Test
+   public void shouldReturnUrlDetailForUser(){
+       String userId="1";
+       String urlId="1";
+       ResponseEntity<String> responseEntity = this.restTemplate.getForEntity(basePath +"/user/{userId}/url/detail/{urlId}",String.class,userId, urlId);
 
-        assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
+       assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
 
-    }
+   }
 
-    @Test
-    public void deleteUrlId(){
-        Long userId=1L;
-        Long urlId=3L;
-        ResponseEntity<String> responseEntity = this.restTemplate.getForEntity(basePath +"/user/{userId}/url/detail/{urlId}",String.class,userId, urlId);
-        restTemplate.delete(basePath + "/user/{userId}/url/detail/{urlId}" , userId , urlId);
+   @Test
+   public void deleteUrlId(){
+       Long userId=1L;
+       Long urlId=3L;
+       ResponseEntity<String> responseEntity = this.restTemplate.getForEntity(basePath +"/user/{userId}/url/detail/{urlId}",String.class,userId, urlId);
+       restTemplate.delete(basePath + "/user/{userId}/url/detail/{urlId}" , userId , urlId);
 
 
-        assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
-    }
+       assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
+   }
 }

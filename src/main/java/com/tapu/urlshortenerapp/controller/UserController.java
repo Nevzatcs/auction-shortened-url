@@ -27,7 +27,7 @@ public class UserController {
 
     @PostMapping("/signup")
     public ResponseEntity<User> saveUser(@RequestBody @Valid UserDTO userdto){
-        Optional<User> resultOptional = userService.saveCustomer(userdto);
+        Optional<User> resultOptional = userService.saveUser(userdto);
         if(resultOptional.isPresent()){
             return new ResponseEntity<>(resultOptional.get(), HttpStatus.OK);
         }

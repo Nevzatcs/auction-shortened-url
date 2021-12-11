@@ -67,7 +67,7 @@ public class User extends AbstractBaseEntity{
     }
 
 
-    @OneToMany(mappedBy = "users")
+    @OneToMany(mappedBy = "user")
     @JsonIgnore
     private List<Url> urlList = new ArrayList<>();
 }

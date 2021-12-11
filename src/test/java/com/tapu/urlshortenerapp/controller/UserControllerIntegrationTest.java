@@ -34,16 +34,16 @@ public class UserControllerIntegrationTest {
 
     private String basePath = "http://localhost:8080";
 
-    @Test
-    public void shouldSaveCustomer(){
-        UserDTO userDTO = new UserDTO("test02", "test02");
-        userService.saveCustomer(userDTO);
-        ResponseEntity<String> responseEntity = this.restTemplate
-                .postForEntity(basePath + "/user/signup", userDTO, String.class);
+ @Test
+ public void shouldSaveUser(){
+     UserDTO userDTO = new UserDTO("test02", "test02");
+     userService.saveUser(userDTO);
+     ResponseEntity<String> responseEntity = this.restTemplate
+             .postForEntity(basePath + "/user/signup", userDTO, String.class);
 
-        assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
+     assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
 
-    }
+ }
 
 
 

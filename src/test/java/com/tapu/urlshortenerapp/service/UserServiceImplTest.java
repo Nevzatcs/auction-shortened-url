@@ -32,7 +32,7 @@ class UserServiceImplTest {
     UserServiceImpl userServiceImpl;
 
     @Test
-    void saveCustomer() {
+    void shouldSaveUser() {
         // given
         User user = new User();
         user.setUsername("test");
@@ -43,7 +43,7 @@ class UserServiceImplTest {
 
         // when
         UserDTO dto = new UserDTO();
-        User actual = this.userServiceImpl.saveCustomer(dto).get();
+        User actual = this.userServiceImpl.saveUser(dto).get();
 
         // then
         assertAll(
@@ -56,7 +56,7 @@ class UserServiceImplTest {
     }
 
     @Test
-    void findUserById() {
+    void shouldFindUserById() {
         //given
         User expected = new User();
         expected.setId(1L);
@@ -73,7 +73,7 @@ class UserServiceImplTest {
     }
 
     @Test
-    void isExistById() {
+    void shouldReturnTrueIfExistById() {
         //given
 
         when(mockUserRepository.isExistsById(anyLong())).thenReturn(Boolean.TRUE);

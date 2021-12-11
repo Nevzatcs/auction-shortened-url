@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public Optional<User> saveCustomer(UserDTO userDTO){
+    public Optional<User> saveUser(UserDTO userDTO){
 
         boolean isExist = userRepository.isExistsByUsername(userDTO.getUsername());
 
