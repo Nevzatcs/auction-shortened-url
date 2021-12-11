@@ -1,14 +1,11 @@
 package com.tapu.urlshortenerapp.controller;
 
-import com.example.urldemo.dto.UrlDTO;
-import com.example.urldemo.dto.UrlResponseDTO;
-import com.example.urldemo.model.Url;
-import com.example.urldemo.model.User;
-import com.example.urldemo.service.UrlService;
-import com.example.urldemo.service.UserService;
 import com.tapu.urlshortenerapp.dto.UrlDTO;
+import com.tapu.urlshortenerapp.dto.UrlResponseDTO;
 import com.tapu.urlshortenerapp.model.Url;
 import com.tapu.urlshortenerapp.model.User;
+import com.tapu.urlshortenerapp.service.UrlService;
+import com.tapu.urlshortenerapp.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

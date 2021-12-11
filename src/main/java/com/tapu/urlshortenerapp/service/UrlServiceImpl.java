@@ -1,16 +1,11 @@
 package com.tapu.urlshortenerapp.service;
 
-import com.example.urldemo.dto.UrlDTO;
-import com.example.urldemo.exceptions.UrlIsNotFoundException;
-import com.example.urldemo.exceptions.UserIsNotFoundException;
-import com.example.urldemo.model.Url;
-import com.example.urldemo.repository.UrlRepository;
 import com.google.common.hash.Hashing;
 import com.tapu.urlshortenerapp.dto.UrlDTO;
+import com.tapu.urlshortenerapp.exceptions.UrlIsNotFoundException;
 import com.tapu.urlshortenerapp.exceptions.UserIsNotFoundException;
 import com.tapu.urlshortenerapp.model.Url;
 import com.tapu.urlshortenerapp.repository.UrlRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -50,11 +45,11 @@ public class UrlServiceImpl implements UrlService {
             throw  new UserIsNotFoundException("User with id: " + id + " is not found");
         }
         else {
-            throw new UrlIsNotFoundException("Userrrrr with id: " + id + " is not found");
+            throw new UrlIsNotFoundException("Url is not found !");
         }
     }
 
-    @Transactional
+
     private String encodeUrl(String url)
     {
         String encodedUrl = "";
