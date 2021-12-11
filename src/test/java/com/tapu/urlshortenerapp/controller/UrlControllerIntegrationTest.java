@@ -48,7 +48,7 @@ public class UrlControllerIntegrationTest {
     @Test
     public void deleteUrlId(){
         Long userId=1L;
-        Long urlId=4L;
+        Long urlId=3L;
         ResponseEntity<String> responseEntity = this.restTemplate.getForEntity(basePath +"/user/{userId}/url/detail/{urlId}",String.class,userId, urlId);
         restTemplate.delete(basePath + "/user/{userId}/url/detail/{urlId}" , userId , urlId);
 
