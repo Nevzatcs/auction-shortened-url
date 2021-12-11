@@ -1,15 +1,11 @@
 package com.tapu.urlshortenerapp.service;
 
-import com.example.urldemo.dto.UserDTO;
-import com.example.urldemo.exceptions.UserIsAlreadyExistException;
-import com.example.urldemo.mappers.UserMapper;
-import com.example.urldemo.model.User;
-import com.example.urldemo.repository.UserRepository;
 import com.tapu.urlshortenerapp.dto.UserDTO;
+import com.tapu.urlshortenerapp.exceptions.UserIsAlreadyExistException;
 import com.tapu.urlshortenerapp.mappers.UserMapper;
 import com.tapu.urlshortenerapp.model.User;
 import com.tapu.urlshortenerapp.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

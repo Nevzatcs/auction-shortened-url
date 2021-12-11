@@ -1,6 +1,5 @@
 package com.tapu.urlshortenerapp.exceptions;
 
-import com.example.urldemo.util.ErrorMessageConstants;
 import com.tapu.urlshortenerapp.utils.ErrorMessageConstants;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,33 +28,12 @@ public class GlobalExceptionHandler {
 
 
 
-
     @ExceptionHandler({MethodArgumentNotValidException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<ErrorResponse> handleException(MethodArgumentNotValidException exc){
         ErrorResponse response = prepareErrorResponse(HttpStatus.BAD_REQUEST, ErrorMessageConstants.WRONG_PATTERN);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     private ErrorResponse prepareErrorResponse(HttpStatus httpStatus, String message) {

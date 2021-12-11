@@ -1,7 +1,7 @@
 package com.tapu.urlshortenerapp.service;
 
-import com.example.urldemo.dto.UserDTO;
-import com.example.urldemo.model.User;
+import com.tapu.urlshortenerapp.dto.UserDTO;
+import com.tapu.urlshortenerapp.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
