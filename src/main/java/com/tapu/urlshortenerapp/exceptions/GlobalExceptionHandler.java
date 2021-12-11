@@ -1,6 +1,7 @@
 package com.tapu.urlshortenerapp.exceptions;
 
 import com.example.urldemo.util.ErrorMessageConstants;
+import com.tapu.urlshortenerapp.utils.ErrorMessageConstants;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
