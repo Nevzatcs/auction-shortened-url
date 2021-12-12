@@ -6,17 +6,18 @@ import com.tapu.urlshortenerapp.exceptions.UrlIsNotFoundException;
 import com.tapu.urlshortenerapp.exceptions.UserIsNotFoundException;
 import com.tapu.urlshortenerapp.model.Url;
 import com.tapu.urlshortenerapp.repository.UrlRepository;
+import com.tapu.urlshortenerapp.utils.ShortLinkGenerationConstants;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.nio.charset.StandardCharsets;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @Service
 public class UrlServiceImpl implements UrlService {
 
+    private Random random = new Random();
 
     private  final UrlRepository urlRepository;
 
@@ -37,7 +38,6 @@ public class UrlServiceImpl implements UrlService {
                 url.setUrl(urlDto.getUrl());
                 url.setShortened(encodedUrl);
                 if(!isDuplicate) {
-                    //Url url = saveShortLink(url);
                     return saveShortLink(url);
                 }
 
@@ -52,26 +52,22 @@ public class UrlServiceImpl implements UrlService {
 
     private String encodeUrl(String url)
     {
-        String encodedUrl = "";
-        LocalDateTime time = LocalDateTime.now();
-        encodedUrl = Hashing.murmur3_32()
-                .hashString(url.concat(time.toString()), StandardCharsets.UTF_8)
-                .toString();
-        return  encodedUrl;
+        char[] result = new char[ShortLinkGenerationConstants.NUM_CHARS_SHORT_LINK];
+
+        for (int i = 0; i < ShortLinkGenerationConstants.NUM_CHARS_SHORT_LINK; ++i) {
+            int randomIndex = random.nextInt(ShortLinkGenerationConstants.ALPHABET.length() - 1);
+            result[i] = ShortLinkGenerationConstants.ALPHABET.charAt(randomIndex);
+        }
+        String shortLink = new String(result);
+
+        return  shortLink;
     }
 
-    @Override
-    @Transactional
-    public Url saveShortLink(Url url) {
-        Url urlReturn = urlRepository.save(url);
-        return urlReturn;
-    }
 
     @Override
     @Transactional
     public Url getEncodedUrl(String url) {
-        Url urlReturn = urlRepository.findByShortened(url);
-        return urlReturn;
+        return urlRepository.findByShortened(url);
     }
 
 
