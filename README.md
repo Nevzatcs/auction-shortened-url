@@ -24,9 +24,13 @@
 - [📝 License](#license)
 
 [(Back to top)](#table-of-contents)
-## ✨ Preview
+## ✨ DB Preview
+- User table
 
 
+
+
+- Url table
 
 
 ## 📥 Installation
