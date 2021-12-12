@@ -44,8 +44,9 @@ public class UrlServiceImpl implements UrlService {
                     throw new ShortenedUrlIsAlreadyExistException("Shortened Url is already exist ! ");
                 }
 
+            }else {
+                throw new UserIsNotFoundException("User with id: " + id + " is not found !");
             }
-            throw  new UserIsNotFoundException("User with id: " + id + " is not found !");
         }
         else {
             throw new UrlIsNotFoundException("Url is not found !");
@@ -125,7 +126,4 @@ public class UrlServiceImpl implements UrlService {
         }
 
     }
-
-
-
 }
