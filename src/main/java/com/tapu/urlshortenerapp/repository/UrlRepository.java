@@ -43,7 +43,7 @@ public interface UrlRepository extends JpaRepository<Url, Long> {
             "   END " +
             "FROM Url u " +
             "WHERE u.shortened= ?1")
-    boolean isDuplicate(String shortened);
+    boolean isShortLinkExist(String shortened);
 
 
 

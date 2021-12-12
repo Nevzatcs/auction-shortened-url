@@ -12,8 +12,6 @@ public interface UrlService {
 
     Url generateShortLink(UrlDTO urlDto, Long id);
 
-    Url saveShortLink(Url url);
-
     Url getEncodedUrl(String url);
 
     Url saveUrl(Url urlToRet);

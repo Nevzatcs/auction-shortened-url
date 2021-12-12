@@ -30,15 +30,15 @@ public class UrlServiceImpl implements UrlService {
     public Url generateShortLink(UrlDTO urlDto, Long id) {
 
         boolean isExist = urlRepository.isExistUser(id);
-        boolean isDuplicate = urlRepository.isDuplicate(urlDto.getUrl());
+        boolean isShortLinkExist = urlRepository.isShortLinkExist(urlDto.getUrl());
         if((!urlDto.getUrl().isEmpty())) {
             if (isExist) {
                 String encodedUrl = encodeUrl(urlDto.getUrl());
                 Url url = new Url();
                 url.setUrl(urlDto.getUrl());
                 url.setShortened(encodedUrl);
-                if(!isDuplicate) {
-                    return saveShortLink(url);
+                if(!isShortLinkExist) {
+                    return saveUrl(url);
                 }
 
             }
