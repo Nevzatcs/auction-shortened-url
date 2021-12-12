@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@TestPropertySource("classpath:application.properties")
+@TestPropertySource("classpath:application-default.properties")
 public class UrlControllerIntegrationTest {
 
     private String basePath = "http://localhost:8080";
