@@ -5,7 +5,7 @@
   <a href="">
     <img src="https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square" />
   </a>
-  <a href="https://github.com/Nevzatcs/url-shortener-app/blob/main/LICENSE">
+  <a href="https://github.com/Nevzatcs/auction-shortened-url/blob/main/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
   </a>
   <a href="">
@@ -161,7 +161,7 @@ DELETE user/{userId}/url/detail/{urlId}
 
 Copyright © 2021.
 
-This project is [MIT](https://github.com/Nevzatcs/url-shortener-app/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/Nevzatcs/auction-shortened-url/blob/main/LICENSE) licensed.
 
 
 ---
