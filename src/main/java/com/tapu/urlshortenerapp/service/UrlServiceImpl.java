@@ -67,14 +67,13 @@ public class UrlServiceImpl implements UrlService {
 
         return  shortLink;
     }
-
+    @Override
     public UrlResponseDTO setResponseDetails(Url url){
         UrlResponseDTO urlResponseDTO = new UrlResponseDTO();
         urlResponseDTO.setShortened(("http://localhost:8080/s/" + url.getShortened())); // make it uncomment for local usage
         urlResponseDTO.setId(url.getId());
         return urlResponseDTO;
     }
-
 
 
     @Override
