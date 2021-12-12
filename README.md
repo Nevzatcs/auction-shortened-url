@@ -27,10 +27,13 @@
 ## ✨ DB Preview
 - User table
 
+![db_user](https://user-images.githubusercontent.com/80898514/145711708-f1049abd-2faf-4155-950e-60f6fa2a52fb.jpg)
 
 
 
 - Url table
+
+![db_url](https://user-images.githubusercontent.com/80898514/145711710-a20aaf93-70ae-4136-8981-9ff4e9f1b092.jpg)
 
 
 ## 📥 Installation
