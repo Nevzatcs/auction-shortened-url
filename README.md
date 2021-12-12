@@ -96,6 +96,8 @@ POST user/signup
   "password":"password",
 } 
   ```
+  ![signup](https://user-images.githubusercontent.com/80898514/145711730-7073ba6c-2486-4150-805a-21a75dae8f1b.jpg)
+
 
 - Urls
 
@@ -106,6 +108,9 @@ POST user/1/url/create
 "url: "https://www.tapu.com/l/uygulamaya-ozel-kampanyali-tapular"
 }
   ```
+  ![create](https://user-images.githubusercontent.com/80898514/145711735-9e84a9ab-30bb-428d-801a-7488c8875b61.jpg)
+
+  
 Redirection to real Url
 
 ```
@@ -117,16 +122,27 @@ Show user's all shortened Url's
 ```
 GET user/{userId}/url/list 
   ```
+  
+ ![get_list](https://user-images.githubusercontent.com/80898514/145711747-a7c2645b-8610-45de-bfec-0c725384ebb2.jpg)
+ 
+  
 Show user's  one of shortened Url detail
 
 ```
 GET user/{userId}/url/detail/{urlId}
   ```
+  
+  ![get_detail](https://user-images.githubusercontent.com/80898514/145711753-536c3f98-8034-469d-a97a-2f9154ec2312.jpg)
+
 
 Delete user's one of shortened urls
 ```
 DELETE user/{userId}/url/detail/{urlId}
  ```
+ 
+ ![delete](https://user-images.githubusercontent.com/80898514/145711756-daae642c-0202-4a6d-bf5e-b02c0c0edfcd.jpg)
+
+ 
 
 [(Back to top)](#table-of-contents)
 ## ⚙️ Tech Stack
