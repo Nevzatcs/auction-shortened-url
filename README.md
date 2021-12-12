@@ -32,7 +32,8 @@
 ## 📥 Installation
 
 - You should have JDK 1.8 on your computer to built the project.
-* [JDK 1.8](https://www.oracle.com/java/technologies/downloads/#java8)
+ 
+  [JDK 1.8](https://www.oracle.com/java/technologies/downloads/#java8)
 
 - Clone the repo
 
