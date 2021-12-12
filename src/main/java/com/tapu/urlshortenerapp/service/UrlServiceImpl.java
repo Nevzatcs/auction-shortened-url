@@ -2,6 +2,7 @@ package com.tapu.urlshortenerapp.service;
 
 import com.google.common.hash.Hashing;
 import com.tapu.urlshortenerapp.dto.UrlDTO;
+import com.tapu.urlshortenerapp.exceptions.ShortenedUrlIsAlreadyExistException;
 import com.tapu.urlshortenerapp.exceptions.UrlIsNotFoundException;
 import com.tapu.urlshortenerapp.exceptions.UserIsNotFoundException;
 import com.tapu.urlshortenerapp.model.Url;
@@ -39,10 +40,12 @@ public class UrlServiceImpl implements UrlService {
                 url.setShortened(encodedUrl);
                 if(!isShortLinkExist) {
                     return saveUrl(url);
+                }else {
+                    throw new ShortenedUrlIsAlreadyExistException("Shortened Url is already exist ! ");
                 }
 
             }
-            throw  new UserIsNotFoundException("User with id: " + id + " is not found");
+            throw  new UserIsNotFoundException("User with id: " + id + " is not found !");
         }
         else {
             throw new UrlIsNotFoundException("Url is not found !");

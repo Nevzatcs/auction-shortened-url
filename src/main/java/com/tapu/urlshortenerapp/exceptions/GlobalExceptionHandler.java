@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
 
 
     @ExceptionHandler({UserIsNotFoundException.class})
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<ErrorResponse> handleException(UserIsNotFoundException exc){
         ErrorResponse response = prepareErrorResponse(HttpStatus.NOT_FOUND, exc.getMessage());
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
@@ -36,11 +36,20 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler({UrlIsNotFoundException.class})
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<ErrorResponse> handleException(UrlIsNotFoundException exc){
         ErrorResponse response = prepareErrorResponse(HttpStatus.NOT_FOUND, exc.getMessage());
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
+
+
+    @ExceptionHandler({ShortenedUrlIsAlreadyExistException.class})
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<ErrorResponse> handleException(ShortenedUrlIsAlreadyExistException exc){
+        ErrorResponse response = prepareErrorResponse(HttpStatus.BAD_REQUEST, exc.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
 
 
 
