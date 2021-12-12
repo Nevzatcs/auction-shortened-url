@@ -1,7 +1,6 @@
 package com.tapu.urlshortenerapp.service;
 
-import com.example.urldemo.model.Url;
-import com.example.urldemo.repository.UrlRepository;
+
 import com.tapu.urlshortenerapp.model.Url;
 import com.tapu.urlshortenerapp.repository.UrlRepository;
 import org.junit.jupiter.api.Test;
