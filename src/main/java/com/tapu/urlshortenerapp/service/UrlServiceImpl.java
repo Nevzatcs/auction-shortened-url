@@ -1,6 +1,6 @@
 package com.tapu.urlshortenerapp.service;
 
-import com.google.common.hash.Hashing;
+
 import com.tapu.urlshortenerapp.dto.UrlDTO;
 import com.tapu.urlshortenerapp.dto.UrlResponseDTO;
 import com.tapu.urlshortenerapp.exceptions.ShortenedUrlIsAlreadyExistException;
