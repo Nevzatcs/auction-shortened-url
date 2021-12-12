@@ -2,6 +2,7 @@ package com.tapu.urlshortenerapp.service;
 
 import com.google.common.hash.Hashing;
 import com.tapu.urlshortenerapp.dto.UrlDTO;
+import com.tapu.urlshortenerapp.dto.UrlResponseDTO;
 import com.tapu.urlshortenerapp.exceptions.ShortenedUrlIsAlreadyExistException;
 import com.tapu.urlshortenerapp.exceptions.UrlIsNotFoundException;
 import com.tapu.urlshortenerapp.exceptions.UserIsNotFoundException;
@@ -67,6 +68,14 @@ public class UrlServiceImpl implements UrlService {
         return  shortLink;
     }
 
+    public UrlResponseDTO setResponseDetails(Url url){
+        UrlResponseDTO urlResponseDTO = new UrlResponseDTO();
+        urlResponseDTO.setShortened(("http://localhost:8080/s/" + url.getShortened())); // make it uncomment for local usage
+        urlResponseDTO.setId(url.getId());
+        return urlResponseDTO;
+    }
+
+
 
     @Override
     @Transactional
@@ -126,4 +135,7 @@ public class UrlServiceImpl implements UrlService {
         }
 
     }
+
+
+
 }

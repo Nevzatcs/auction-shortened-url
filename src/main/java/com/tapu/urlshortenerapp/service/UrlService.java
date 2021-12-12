@@ -2,6 +2,7 @@ package com.tapu.urlshortenerapp.service;
 
 
 import com.tapu.urlshortenerapp.dto.UrlDTO;
+import com.tapu.urlshortenerapp.dto.UrlResponseDTO;
 import com.tapu.urlshortenerapp.model.Url;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,8 @@ public interface UrlService {
     List<String> findShortLinkByUserIdAndId(Long userId, Long urlId);
 
     void deleteById(Long userId, Long urlId);
+
+    UrlResponseDTO setResponseDetails(Url url);
 
 
 }

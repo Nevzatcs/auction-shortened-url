@@ -38,10 +38,7 @@ public class UrlController {
             Optional<User> users = userService.findUserById(userId);
             urlToRet.setUser(users.get());
 
-            UrlResponseDTO urlResponseDTO = new UrlResponseDTO();
-            urlResponseDTO.setShortened(("http://localhost:8080/s/" + urlToRet.getShortened()));
-            urlResponseDTO.setId(urlToRet.getId());
-
+            UrlResponseDTO urlResponseDTO = urlService.setResponseDetails(urlToRet);
             urlService.saveUrl(urlToRet);
             return new ResponseEntity<>(urlResponseDTO, HttpStatus.OK);
 
