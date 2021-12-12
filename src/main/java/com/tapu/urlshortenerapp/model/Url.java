@@ -10,7 +10,10 @@ public class Url extends AbstractBaseEntity{
     private String url;
     private String shortened;
 
-
+    public Url(String url, String shortened) {
+        this.shortened = shortened;
+        this.url = url;
+    }
 
     public Url() {
     }
