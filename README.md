@@ -86,6 +86,8 @@ mvnw spring-boot:run
 ## ⚙️ API Example
 - The project will run on port 8080 (configured as default).
 
+-Project is online in: https://auction-shorten-url.herokuapp.com (can make requests)
+
 - Users
 
 Add new User 
@@ -111,7 +113,7 @@ POST user/1/url/create
   ![create](https://user-images.githubusercontent.com/80898514/145711735-9e84a9ab-30bb-428d-801a-7488c8875b61.jpg)
 
   
-Redirection to real Url
+Redirection to real Url 
 
 ```
 GET http://localhost:8080/s/XXXyyyZZZZ 

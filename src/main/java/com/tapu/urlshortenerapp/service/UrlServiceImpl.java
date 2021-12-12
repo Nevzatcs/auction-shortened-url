@@ -70,7 +70,8 @@ public class UrlServiceImpl implements UrlService {
     @Override
     public UrlResponseDTO setResponseDetails(Url url){
         UrlResponseDTO urlResponseDTO = new UrlResponseDTO();
-        urlResponseDTO.setShortened(("http://localhost:8080/s/" + url.getShortened())); // make it uncomment for local usage
+        // urlResponseDTO.setShortened(("http://localhost:8080/s/" + url.getShortened())); // make it uncomment for local usage!
+        urlResponseDTO.setShortened(("https://auction-shorten-url.herokuapp.com/s/" + url.getShortened())); // make it comment for local usage!
         urlResponseDTO.setId(url.getId());
         return urlResponseDTO;
     }
